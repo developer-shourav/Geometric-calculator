@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantastic Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
 </head>
     
@@ -58,14 +57,14 @@
                             <h4 class="card-title fw-bold text-dark-emphasis">Rectangle</h4>
                             <h6 class="card-title text-dark-emphasis ">Area (A) = w x l</h6>
                             <div class="d-flex justify-content-between">
-                            <span><input class="w-50 bg-body-secondary border-0 ps-2   rounded-1" placeholder="w" type="text"> cm</span>
+                            <span><input id="rectangle-first-input" class="w-50 bg-body-secondary border-0 ps-2   rounded-1" placeholder="w" type="text"> cm</span>
                             
                             <span>
-                            <input class="w-50 bg-body-secondary border-0 ps-2  rounded-1" type="text" placeholder="l"> cm
+                            <input id="rectangle-second-input" class="w-50 bg-body-secondary border-0 ps-2  rounded-1" type="text" placeholder="l"> cm
                             </span>
                             </div>
                             <br>
-                            <button class="btn btn-primary w-100 mt-3">Calculate</button>
+                            <button id="rectangle-cal-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
                         </div>
                         </div>
                     </div>
