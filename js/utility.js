@@ -8,6 +8,12 @@ function getAreaInputsValue (id){
     return inputFieldValue;
 };
 
+function getAreaInputsFromText (id){
+    const measuringInput = document.getElementById(id);
+    const measuringInputString = measuringInput.innerText;
+    const measuringInputValue = parseFloat(measuringInputString);
+    return measuringInputValue;
+};
 
 function showAreaCalculation(calculatedAreaOf, result) {
 
