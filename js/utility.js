@@ -68,3 +68,11 @@ function setPentagonBg(){
     pentagonCard.style.backgroundColor = "#" + randomColor;
 }
 
+
+function setEllipseBg(){
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+    const ellipseCard = document.getElementById("ellipse-card");
+    ellipseCard.style.backgroundColor = "#" + randomColor;
+}
+
