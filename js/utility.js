@@ -60,3 +60,11 @@ function setRhombusBg(){
     rhombusCard.style.backgroundColor = "#" + randomColor;
 }
 
+
+function setPentagonBg(){
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+    const pentagonCard = document.getElementById("pentagon-card");
+    pentagonCard.style.backgroundColor = "#" + randomColor;
+}
+
