@@ -31,6 +31,7 @@
            <div class="col-12 col-md-8 ">
 
                 <div class="row row-cols-1 row-cols-md-3 g-2 text-center">
+         <!--------------- Triangle Card -------------------->
                     <div class="col ">
                     <div class="card shadow h-100">
                         <img src="images/triangle.png " class="card-img-top w-75 text-center mx-auto my-3 p-3 " alt="...">
@@ -38,14 +39,14 @@
                         <h4 class="card-title fw-bold text-dark-emphasis">Triangle</h4>
                         <h6 class="card-title text-dark-emphasis ">Area (A) = 0.5 x b x h</h6>
                         <div class="d-flex justify-content-between">
-                            <span><input class="w-50 bg-body-secondary border-0 ps-2 pe-4  rounded-1" placeholder="b" type="text"> cm</span>
+                            <span><input id="triangle-first-input" class="w-50 bg-body-secondary border-0 ps-2   rounded-1" placeholder="b" type="text"> cm</span>
                         
                         <span>
-                            <input class="w-50 bg-body-secondary border-0 ps-2 pe-4 rounded-1" type="text" placeholder="h"> cm
+                            <input id="triangle-second-input" class="w-50 bg-body-secondary border-0 ps-2  rounded-1" type="text" placeholder="h"> cm
                         </span>
                         </div>
                         <br>
-                        <button class="btn btn-primary w-100 mt-3">Calculate</button>
+                        <button id="triangle-cal-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
                         </div>
                     </div>
                     </div>
@@ -57,10 +58,10 @@
                             <h4 class="card-title fw-bold text-dark-emphasis">Rectangle</h4>
                             <h6 class="card-title text-dark-emphasis ">Area (A) = w x l</h6>
                             <div class="d-flex justify-content-between">
-                            <span><input class="w-50 bg-body-secondary border-0 ps-2 pe-4  rounded-1" placeholder="w" type="text"> cm</span>
+                            <span><input class="w-50 bg-body-secondary border-0 ps-2   rounded-1" placeholder="w" type="text"> cm</span>
                             
                             <span>
-                            <input class="w-50 bg-body-secondary border-0 ps-2 pe-4 rounded-1" type="text" placeholder="l"> cm
+                            <input class="w-50 bg-body-secondary border-0 ps-2  rounded-1" type="text" placeholder="l"> cm
                             </span>
                             </div>
                             <br>
@@ -140,7 +141,7 @@
                     <div class="card-body">
                     <h4 class="fw-bold border-bottom  text-dark-emphasis border-3 border-dark-subtle w-75 mx-auto">Area Calculation</h4>
 
-                    <ol class="text-start text-dark">
+                    <ol id="result-shower-container" class="text-start text-dark">
                         <li class="my-3"><span>Triangle</span> <span class="mx-4 ">12cm<sup>2</sup></span> <button class="btn btn-primary">Covert to m<sup>2</sup></button> </li>
 
                         <li class="my-3"><span>Ellipse</span> <span class="mx-3 ">125.60cm<sup>2</sup></span> <button class="btn btn-primary">Covert to m<sup>2</sup></button> </li> 
