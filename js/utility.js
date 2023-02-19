@@ -2,21 +2,29 @@
 function getAreaInputsValue (id){
     const inputField = document.getElementById(id);
     const inputFieldString = inputField.value;
+    const inputFieldValue = parseFloat(inputFieldString);
     /* =============Input Validation================ */
     if(inputFieldString == ""){
         alert("⚠️⚠️ You input field is empty!!. Please enter number value in both field.");
-        return inputFieldString;
+        
     }
-    else if(typeof inputFieldString == "string"){
-        alert("⚠️⚠️ Sorry!! You entered string value. Please Enter only number value in both field.");
-        return inputFieldString;
+   
+    else if( inputFieldValue < 0){
+        inputField.value = '';
+        alert("⚠️⚠️ Enter Positive number.🔢🔢");
+       
     }
-   else{
-    const inputFieldValue = parseFloat(inputFieldString);
-    inputField.value = '';
 
-    return inputFieldValue;
-   }
+    else if( isNaN(inputFieldValue)  == true){
+        alert("😔😔 Sorry!! You entered string value. Please Enter only number value in both field.");
+        inputField.value = '';
+    }
+
+    else{
+        inputField.value = '';
+        return inputFieldValue;
+
+    }
 };
 /* ======================================== */
 function getAreaInputsFromText (id){
@@ -27,6 +35,7 @@ function getAreaInputsFromText (id){
 };
 /* ======================================== */
 function showAreaCalculation(calculatedAreaOf, result) {
+    console.log(calculatedAreaOf, result);
 
     const areaCalculationViewArea = document.getElementById("result-shower-container");
     const resultList = document.createElement("li");
