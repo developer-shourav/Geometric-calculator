@@ -2,10 +2,21 @@
 function getAreaInputsValue (id){
     const inputField = document.getElementById(id);
     const inputFieldString = inputField.value;
+    /* =============Input Validation================ */
+    if(inputFieldString == ""){
+        alert("⚠️⚠️ You input field is empty!!. Please enter number value in both field.");
+        return inputFieldString;
+    }
+    else if(typeof inputFieldString == "string"){
+        alert("⚠️⚠️ Sorry!! You entered string value. Please Enter only number value in both field.");
+        return inputFieldString;
+    }
+   else{
     const inputFieldValue = parseFloat(inputFieldString);
     inputField.value = '';
 
     return inputFieldValue;
+   }
 };
 /* ======================================== */
 function getAreaInputsFromText (id){
