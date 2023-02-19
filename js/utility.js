@@ -1,4 +1,4 @@
-/* ======================================== */
+/* ===================Input field value processing function ===================== */
 function getAreaInputsValue (id){
     const inputField = document.getElementById(id);
     const inputFieldString = inputField.value;
@@ -26,30 +26,37 @@ function getAreaInputsValue (id){
 
     }
 };
-/* ======================================== */
+/* ===================Text value processing function ===================== */
 function getAreaInputsFromText (id){
     const measuringInput = document.getElementById(id);
     const measuringInputString = measuringInput.innerText;
     const measuringInputValue = parseFloat(measuringInputString);
     return measuringInputValue;
 };
-/* ======================================== */
+
+/* ===================Are calculation result showing function ===================== */
 function showAreaCalculation(calculatedAreaOf, result) {
     console.log(calculatedAreaOf, result);
 
     const areaCalculationViewArea = document.getElementById("result-shower-container");
+    /* ========= Creating New (li) element============== */
     const resultList = document.createElement("li");
+    /* ========= adding class and value============== */
     resultList.className = "my-3"
+    /* ========= adding inner html and dynamic data ============== */
     resultList.innerHTML = `
     <span>${calculatedAreaOf}</span> <span class="mx-2 ">${result}cm<sup>2</sup></span> <button class="btn btn-primary">Covert to m<sup>2</sup></button>
     `;
+    /* ========= adding child to the parent element ============== */
     areaCalculationViewArea.appendChild(resultList);
     
 };
 
 
 
-
+/* =============================================================================
+       Functions for changing  card's background color randomly on mouseenter
+============================================================================== */
 
 function setTriangleBg(){
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -96,11 +103,11 @@ function setEllipseBg(){
     ellipseCard.style.backgroundColor = "#" + randomColor;
 }
 
-
+/* ========= index page to blog page visiting btn  ============== */
 document.getElementById("blog-btn").addEventListener("click", function(){
     window.location.href = "blog.html";
 })
-
+/* ========= blog page to index page back btn  ============== */
 document.getElementById("home-btn").addEventListener("click", function(){
     window.location.href = "index.html";
 })
