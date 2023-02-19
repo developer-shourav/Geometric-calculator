@@ -6,7 +6,6 @@ document.getElementById("triangle-cal-btn").addEventListener("click", function()
 
         const triangleFormula = 0.5 * trianglesFirstInputValue * trianglesSecondInputValue;
         const areaOfTriangleFinalResult = triangleFormula.toFixed(2);
-        console.log("The fourmula is", areaOfTriangleFinalResult);
         showAreaCalculation("Triangle", areaOfTriangleFinalResult);
 
 
